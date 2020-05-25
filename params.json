@@ -134,7 +134,7 @@
       }
     }
   },
-  "name": "IMDB Movie Reviews NLP",
+  "name": "Demo NLP",
   "imgPattern": 6,
   "metrics": {
     "probes": [],
@@ -191,11 +191,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 9,
+    "versionNumber": 10,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1590401082424
+    "lastModifiedOn": 1590401184527
   },
   "creationTag": {
     "versionNumber": 0,
