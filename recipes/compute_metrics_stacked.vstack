@@ -1,0 +1,104 @@
+{
+  "mode": "UNION",
+  "selectedColumns": [
+    "date",
+    "precision",
+    "recall",
+    "auc",
+    "f1",
+    "accuracy"
+  ],
+  "originColumnName": "original_dataset",
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVECLI_LOCAL"
+    },
+    "sqlPipelineParams": {
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "skipPrerunValidate": false,
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "mode": "AUTO",
+        "autoModeRepartitionInto": 10,
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "executionEngine": "SPARK_SUBMIT",
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "virtualInputs": [
+    {
+      "preFilter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "originLabel": "dl",
+      "index": 0
+    },
+    {
+      "preFilter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "originLabel": "ml",
+      "index": 1
+    }
+  ],
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "date",
+            "type": "date"
+          },
+          {
+            "name": "precision",
+            "type": "double"
+          },
+          {
+            "name": "recall",
+            "type": "double"
+          },
+          {
+            "name": "auc",
+            "type": "double"
+          },
+          {
+            "name": "f1",
+            "type": "double"
+          },
+          {
+            "name": "accuracy",
+            "type": "double"
+          },
+          {
+            "name": "original_dataset",
+            "type": "string"
+          }
+        ],
+        "userModified": false
+      }
+    },
+    "distinct": false,
+    "enabled": false
+  },
+  "addOriginColumn": true
+}

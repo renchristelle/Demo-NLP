@@ -1,0 +1,38 @@
+{
+  "tags": {
+    "Topic modeling": {
+      "color": "#49e6a0"
+    },
+    "Prediction - DL": {
+      "color": "#693b52"
+    },
+    "Plugin - Entity extraction": {
+      "color": "#d66b9b"
+    },
+    "Download Embeddings": {
+      "color": "#c21a6b"
+    },
+    "Data Preprocessing": {
+      "color": "#1a7bc2"
+    },
+    "Download Data": {
+      "color": "#FFD83D"
+    },
+    "Plugin - Sentiment Analysis": {
+      "color": "#28aadd"
+    },
+    "recipe-editor": {},
+    "imported": {
+      "color": "#263238"
+    },
+    "Plugin - Summarization": {
+      "color": "#00a55a"
+    },
+    "Prediction - ML": {
+      "color": "#28aadd"
+    },
+    "Plugin - Sentence Embeddings": {
+      "color": "#1ac2ab"
+    }
+  }
+}

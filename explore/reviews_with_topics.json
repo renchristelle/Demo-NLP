@@ -1,0 +1,103 @@
+{
+  "script": {
+    "steps": [],
+    "maxProcessedMemTableBytes": -1,
+    "columnsSelection": {
+      "mode": "SELECT",
+      "list": [
+        {
+          "name": "text",
+          "d": true
+        },
+        {
+          "name": "sentiment",
+          "d": true
+        },
+        {
+          "name": "polarity",
+          "d": true
+        },
+        {
+          "name": "sample",
+          "d": true
+        },
+        {
+          "name": "Horror",
+          "d": false
+        },
+        {
+          "name": "Story",
+          "d": false
+        },
+        {
+          "name": "Series",
+          "d": false
+        },
+        {
+          "name": "Bad",
+          "d": false
+        },
+        {
+          "name": "Good",
+          "d": false
+        },
+        {
+          "name": "final_topic",
+          "d": true
+        }
+      ]
+    },
+    "columnWidthsByName": {
+      "text": 903,
+      "sentiment": 100,
+      "polarity": 100,
+      "sample": 100,
+      "Horror": 155,
+      "Story": 155,
+      "Series": 155,
+      "Bad": 155,
+      "Good": 155,
+      "final_topic": 100
+    },
+    "coloring": {
+      "scheme": "MEANING_AND_STATUS",
+      "individualColumns": [],
+      "valueColoringMode": "HASH"
+    },
+    "sorting": [],
+    "analysisColumnData": {},
+    "explorationSampling": {
+      "selection": {
+        "maxStoredBytes": 104857600,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "vizSampling": {
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
+    "globalSearchQuery": "",
+    "explorationFilters": [],
+    "previewMode": "ALL_ROWS"
+  },
+  "charts": []
+}

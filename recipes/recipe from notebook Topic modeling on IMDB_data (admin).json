@@ -1,0 +1,64 @@
+{
+  "type": "python",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "envSelection": {
+      "envMode": "INHERIT"
+    },
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    },
+    "skipPrerunValidate": false
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "IMDB_data",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "reviews_with_topics",
+          "appendMode": false
+        },
+        {
+          "ref": "top_words_per_topic",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 22,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1590167460239
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1590164963158
+  },
+  "tags": [
+    "Topic modeling"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

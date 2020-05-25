@@ -1,0 +1,63 @@
+{
+  "type": "CustomCode_sentiment-analysis-score",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "customConfig": {
+      "sentiment_scale": "binary",
+      "output_score": true,
+      "output_sentiment": true,
+      "output_confidence": true,
+      "text_column_name": "text"
+    },
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {
+    "input_dataset": {
+      "items": [
+        {
+          "ref": "IMDB_data_filtered",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "output_dataset": {
+      "items": [
+        {
+          "ref": "plugin-sentiment_analysis",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 2,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1590157371961
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1590152464589
+  },
+  "tags": [
+    "Plugin - Sentiment Analysis"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

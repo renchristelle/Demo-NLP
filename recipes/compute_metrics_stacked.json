@@ -1,0 +1,56 @@
+{
+  "type": "vstack",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "metrics",
+          "deps": []
+        },
+        {
+          "ref": "metrics_ml",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "metrics_stacked",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 4,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1590157551594
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1590157045616
+  },
+  "tags": [
+    "Prediction - DL",
+    "Prediction - ML"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

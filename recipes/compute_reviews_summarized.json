@@ -1,0 +1,62 @@
+{
+  "type": "CustomCode_text-summarization-compute",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "customConfig": {
+      "method": "textrank",
+      "n_sentences": 1,
+      "text_column_name": "text"
+    },
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {
+    "input_dataset": {
+      "items": [
+        {
+          "ref": "IMDB_data_filtered",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "output_dataset": {
+      "items": [
+        {
+          "ref": "reviews_summarized",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 21,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1590157607472
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1589479199771
+  },
+  "shortDesc": "Text summarization based on _Sumy_ library using _nltk punkt_  tokenizer",
+  "tags": [
+    "Plugin - Summarization"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

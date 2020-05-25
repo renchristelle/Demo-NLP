@@ -1,0 +1,74 @@
+{
+  "type": "CustomCode_sentence-embedding-compute",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "customConfig": {
+      "aggregation_method": "simple_average",
+      "embedding_is_custom": true,
+      "advanced_settings": false,
+      "smoothing_parameter": 0.001,
+      "n_principal_components": 1,
+      "text_column_names": [
+        "text"
+      ]
+    },
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {
+    "embedding_folder": {
+      "items": [
+        {
+          "ref": "nHolKezG",
+          "deps": []
+        }
+      ]
+    },
+    "input_dataset": {
+      "items": [
+        {
+          "ref": "IMDB_data_filtered",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "output_dataset": {
+      "items": [
+        {
+          "ref": "fasttext_sentence_embedded",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 12,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1590157607471
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1589787758164
+  },
+  "tags": [
+    "Plugin - Sentence Embeddings"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

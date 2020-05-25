@@ -1,0 +1,66 @@
+{
+  "type": "CustomCode_named-entity-recognition-extract",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "customConfig": {
+      "text_language_spacy": "en",
+      "text_language_flair": "en",
+      "advanced_settings": false,
+      "output_single_json": false,
+      "ner_model": "spacy",
+      "text_column_name": "text"
+    },
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {
+    "input_dataset": {
+      "items": [
+        {
+          "ref": "IMDB_data_filtered",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "output_dataset": {
+      "items": [
+        {
+          "ref": "named_entities_extracted",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 4,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1590157327524
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1589792433964
+  },
+  "description": "Default model is Spacy. \nFlair model available, but it is necessary to download it first (with plugin macro)",
+  "shortDesc": "Named Entitiy extraction.\n",
+  "tags": [
+    "Plugin - Entity extraction"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
