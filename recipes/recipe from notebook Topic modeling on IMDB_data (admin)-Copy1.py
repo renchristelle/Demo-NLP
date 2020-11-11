@@ -119,17 +119,8 @@ topics_model = LatentDirichletAllocation(n_topics, random_state=0)
 topics_model.fit(text_tfidf)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
-# Use this line for LDA
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
 # ### Most Frequent Words per Topics
 # An important way to assess the validity of our topic modelling is to directly look at the most frequent words in each topics.
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
-# Uncomment the following line to try NMF instead.
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-#topics_model = NMF(n_topics, random_state=0)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 n_top_words = 10
