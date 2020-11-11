@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1605079875353
+    "lastModifiedOn": 1605080029125
   },
   "creationTag": {
     "versionNumber": 0,
@@ -57,8 +57,69 @@
     "readSQLDateColsAsDSSDates": true
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {
+        "name": "text",
+        "type": "string"
+      },
+      {
+        "name": "sentiment",
+        "type": "bigint"
+      },
+      {
+        "name": "polarity",
+        "type": "bigint"
+      },
+      {
+        "name": "sample",
+        "type": "string"
+      },
+      {
+        "name": "Posting",
+        "type": "double"
+      },
+      {
+        "name": "Driving",
+        "type": "double"
+      },
+      {
+        "name": "OS (Windows)",
+        "type": "double"
+      },
+      {
+        "name": "Past",
+        "type": "double"
+      },
+      {
+        "name": "Games",
+        "type": "double"
+      },
+      {
+        "name": "Sales",
+        "type": "double"
+      },
+      {
+        "name": "Misc",
+        "type": "double"
+      },
+      {
+        "name": "Christianity",
+        "type": "double"
+      },
+      {
+        "name": "Personal information",
+        "type": "double"
+      },
+      {
+        "name": "Government/Justice",
+        "type": "double"
+      },
+      {
+        "name": "final_topic",
+        "type": "string"
+      }
+    ],
+    "userModified": false
   },
   "metrics": {
     "probes": [
