@@ -63,7 +63,7 @@ raw_text1 = df[raw_text_col]
 raw_text2 = df[raw_text_col]
 
 # Issue a warning if data contains NaNs
-if(raw_text.isnull().any()):
+if(raw_text1.isnull().any()):
     print('\x1b[33mWARNING: Your text contains NaNs\x1b[0m')
     print('Please take care of them, the countVextorizer will not be able to fit your data if it contains empty values.')
 
