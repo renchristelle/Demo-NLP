@@ -22,7 +22,7 @@
 # [See here for help with intalling python packages.](https://www.dataiku.com/learn/guide/code/python/install-python-packages.html)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-%pylab inline
+#%pylab inline
 import warnings                         # Disable some warnings
 warnings.filterwarnings("ignore",category=DeprecationWarning)
 import dataiku
