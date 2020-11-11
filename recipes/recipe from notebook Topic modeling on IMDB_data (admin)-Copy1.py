@@ -33,7 +33,7 @@ from sklearn.feature_extraction import text
 
 from sklearn.decomposition import LatentDirichletAllocation,NMF
 import pyLDAvis.sklearn
-pyLDAvis.enable_notebook()
+#pyLDAvis.enable_notebook()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 dataset_limit = 10000
