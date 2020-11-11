@@ -54,12 +54,6 @@ mydataset2 = dataiku.Dataset("IMDB_data")
 df = mydataset.get_dataframe(limit = dataset_limit)
 df = mydataset2.get_dataframe(limit = dataset_limit)
 
-
-# Get the column names
-numerical_columns = list(df.select_dtypes(include=[np.number]).columns)
-categorical_columns = list(df.select_dtypes(include=[object]).columns)
-date_columns = list(df.select_dtypes(include=['<M8[ns]']).columns)
-
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: MARKDOWN
 # By default, we suppose that the text of interest for which we want to extract topics is the first of the categorical columns.
 
