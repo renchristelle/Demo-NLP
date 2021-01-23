@@ -28,6 +28,7 @@
     ]
   },
   "projectType": "REGULAR",
+  "projectAppType": "REGULAR",
   "owner": "admin",
   "permissions": [],
   "additionalDashboardUsers": {
@@ -37,6 +38,7 @@
   "settings": {
     "flowAnchorSourcesAndSinks": true,
     "gitCommitMode": "AUTO",
+    "useRemoteGit": true,
     "disableAutomaticTriggers": false,
     "integrations": {
       "integrations": []
@@ -72,12 +74,16 @@
     },
     "codeEnvs": {
       "python": {
-        "useBuiltinEnv": false,
+        "mode": "EXPLICIT_ENV",
         "preventOverride": false,
         "envName": "dl_nlp"
       },
       "r": {
-        "useBuiltinEnv": true,
+        "mode": "INHERIT",
+        "preventOverride": false
+      },
+      "julia": {
+        "mode": "INHERIT",
         "preventOverride": false
       }
     },
@@ -128,9 +134,12 @@
           "initialReplicas": 1,
           "hpa": false,
           "hpaTargetCPUPercent": 0,
+          "hpaMetrics": [],
           "hpaMinPods": 0,
-          "hpaMaxPods": 0
-        }
+          "hpaMaxPods": 0,
+          "hpaAnnotations": []
+        },
+        "deploymentModifier": {}
       }
     }
   },
@@ -191,11 +200,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 10,
+    "versionNumber": 11,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1590401184527
+    "lastModifiedOn": 1611361618267
   },
   "creationTag": {
     "versionNumber": 0,
